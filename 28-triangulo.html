@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>É ou não um triângulo?</h1>
+
+<script src="js/pegaNumero.js"></script>
+
+<script>
+
+    var ladoA = pegaInt('Informe o valor do lado A:')
+    var ladoB = pegaInt('Informe o valor do lado B:')
+    var ladoC = pegaInt('Informe o valor do lado C:')
+
+    if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoB + ladoA)
+    {
+        document.write('É um TRIÂNGULO!')
+    }
+    else 
+    {
+        document.write('NÃO é um TRIÂNGULO!')
+    }
+
+</script>

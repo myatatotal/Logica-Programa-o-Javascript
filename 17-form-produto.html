@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<h1>Formulário - Preço Final do Produto</h1>
+
+<p>
+    Nome do Produto: <br>
+    <input type="text" id="campoNomeProduto">
+</p>
+
+<p>
+    Preço Unitário: <br>
+    <input type="number" id="campoPrecoUnitario">
+</p>
+
+<p>
+    Quantidade: <br>
+    <input type="number" id="campoQuantidade">
+</p>
+
+<button onclick="calcular()">
+    Calcular Total
+</button>
+
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    function calcular()
+    {
+        var produto = campoNomeProduto.value 
+        var preco = campoPrecoUnitario.valueAsNumber 
+        var quantidade = campoQuantidade.valueAsNumber 
+        var totalCompra = preco * quantidade 
+
+        document.write(`
+            Produto: ${produto} <br>
+            Quantidade: ${quantidade} <br>
+            Preço Unitário: ${formataMoeda(preco)} <br>
+            Total da Compra: ${formataMoeda(totalCompra)}
+        `)
+    }
+
+</script>

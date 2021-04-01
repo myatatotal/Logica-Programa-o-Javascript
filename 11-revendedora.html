@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<h1>Revendedora</h1>
+<script>
+
+    // coleta de informações
+    var salario_fixo = parseFloat(prompt('Informe seu salário:').replace(',', '.'))
+    var total_vendas = parseFloat(prompt('Informe o valor total das vendas:').replace(',', '.'))
+    var quantidade_carros = parseInt(prompt('Informe a quantidade de carros vendidos:'))
+    var comissao_por_carro = parseFloat(prompt('Informe o valor da comissão por carro vendido:'))
+
+    // Comissão 1
+    var total_comissao1 = comissao_por_carro * quantidade_carros
+
+    // Comissão 2
+    var total_comissao2 = total_vendas * 0.05
+
+    // Salário Final
+    var salario_final = salario_fixo + total_comissao1 + total_comissao2
+
+    document.write(`
+        Salário Fixo: R$ ${salario_fixo.toFixed(2).replace('.', ',')} <br>
+        Valor por Carro Vendido: R$ ${comissao_por_carro.toFixed(2).replace('.', ',')} <br>
+        Qtd de Carros Vendidos: ${quantidade_carros} <br>
+        <br>
+        Total Comissão 1 (Fixa): R$ ${total_comissao1.toFixed(2).replace('.', ',')} <br>
+        Total Comissão 2 (5%): R$ ${total_comissao2.toFixed(2).replace('.', ',')} <br>
+        <br>
+        O seu salário final é: R$ ${salario_final.toFixed(2).replace('.', ',')}
+    `)
+
+</script>

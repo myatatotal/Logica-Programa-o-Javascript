@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<h1>Posto de Gasolina</h1>
+
+<p>
+    Quantidade de Litros: <br>
+    <input type="number" id="campoQtdLitros">
+</p>
+
+<p>
+    Tipo de Combustível: <br>
+    <select id="campoTipoCombustivel">
+        <option value="Gasolina">Gasolina</option>
+        <option value="Álcool">Álcool</option>
+    </select>
+</p>
+
+<button onclick="calcularCombustivel()">
+    Calcular
+</button>
+
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    function calcularCombustivel()
+    {
+        var qtdLitros = campoQtdLitros.valueAsNumber
+        var tipoCombustivel = campoTipoCombustivel.value 
+
+        if (qtdLitros <= 20 && tipoCombustivel == 'Álcool') {
+            // desconto de 3% sobre 2.90
+            var precoComDesconto = 2.90 - (2.90 * 0.03)
+            var total = precoComDesconto * qtdLitros
+        }
+        else if (qtdLitros > 20 && tipoCombustivel == 'Álcool') {
+            // desconto de 5% sobre 2.90
+            var precoComDesconto = 2.90 - (2.90 * 0.05)
+            var total = precoComDesconto * qtdLitros
+        }
+        else if (qtdLitros <= 20 && tipoCombustivel == 'Gasolina') {
+            // desconto de 4% sobre 3.30
+            var precoComDesconto = 3.30 - (3.30 * 0.04)
+            var total = precoComDesconto * qtdLitros
+        }
+        else {
+            // desconto de 6% sobre 3.30
+            var precoComDesconto = 3.30 - (3.30 * 0.06)
+            var total = precoComDesconto * qtdLitros
+        }
+
+        document.write(`Total a ser pago é: ${formataMoeda(total)}`)
+    }
+
+</script>

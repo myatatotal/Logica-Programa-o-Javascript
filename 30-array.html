@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>Array</h1>
+
+<script>
+
+    // Array = Lista / Matriz / Vetor
+    // Todo array começa no índice ZERO (0)
+    var listaSupermercado = ["Arroz", "Feijão", "Açúcar", "Cerveja", "Vodka", "Leite"]
+    alert('O primeiro item da lista é: ' + listaSupermercado[0])
+    alert('O último item da lista é: ' + listaSupermercado[5])
+
+    document.write(`
+        Minha lista de supermercado tem <b>${listaSupermercado.length} item(ns)</b>. Eles são: <br>
+        <ol>
+            <li>
+                ${listaSupermercado.join('</li><li>')}
+            </li>
+        </ol>
+    `)
+
+</script>

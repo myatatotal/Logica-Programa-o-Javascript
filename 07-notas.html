@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<h1>Nota final do aluno</h1>
+
+<script>
+
+    var nota1 = parseFloat(prompt("Informe a nota 1").replace(',', '.'))
+    var nota2 = parseFloat(prompt("Informe a nota 2").replace(',', '.'))
+    var nota3 = parseFloat(prompt("Informe a nota 3").replace(',', '.'))
+    var media_final = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10
+    document.write(`Sua nota final é: ${media_final.toFixed(1)}`)
+
+</script>

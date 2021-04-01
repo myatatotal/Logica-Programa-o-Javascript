@@ -1,0 +1,41 @@
+Carro:
+    1) distancia em KM (float) 
+    2) quantos km o carro faz por litro (autonomia) (float) 
+    3) preço da gasolina (float)  
+    4) preço do estacionamento (float) 
+
+    Exibir:
+        Preço da Gasolina: R$ X
+        Valor gasto com Gasolina: R$ X
+        Preço do Estacionamento: R$ X
+        Total da Viagem com Carro: R$ X
+
+
+    distancia / autonomia * precoGasolina
+
+    50 km 
+    25 km/l
+    2 litros
+
+=======================================
+
+Uber:
+    1) Preço base: R$ 2,75
+    2) Velocidade Média: 25 KM/h
+    3) R$ 0,26 por minuto de viagem 
+    4) R$ 1,40 por KM rodado 
+
+    Exibir:
+        Total da Viagem com Uber: R$ X
+
+
+    Cálculos Necessários:
+        1) Gasto com o tempo de viagem 
+        2) Gasto com a distância percorrida (X)
+        3) Total da Viagem
+
+distancia = 50 km
+vm = 25 km/h
+horas = 2 horas 
+minutos = horas * 60
+gasto com tempo viagem = minutos * 0.26

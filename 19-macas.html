@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<h1>Maçãs</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    var quantidade = pegaInt('Informe a quantidade de maçãs:')
+    var total = quantidade * 1
+
+    if (quantidade < 12) 
+    {
+        // Preço da Maçã = R$ 1,30
+        var total = quantidade * 1.30
+    }
+
+    document.write(`
+        Quantidade comprada: ${quantidade} maçã(s) <br>
+        Total da compra é: ${formataMoeda(total)}
+    `)
+
+</script>

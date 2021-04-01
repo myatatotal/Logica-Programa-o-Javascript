@@ -1,0 +1,1 @@
+Crie um algoritmo que peça o nome de 2 times e o número de gols marcados na partida (para cada time). Exiba o nome do vencedor. Caso não haja vencedor deverá ser exibida a palavra EMPATE.

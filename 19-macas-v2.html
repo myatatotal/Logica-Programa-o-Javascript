@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<h1>Maçãs</h1>
+
+<p>
+    Quantidade a ser comprada:<br>
+    <input type="number" id="campoQtd">
+</p>
+
+<button onclick="calcular()">
+    Calcular
+</button>
+
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    function calcular()
+    {
+        var qtd = campoQtd.valueAsNumber
+
+        if (qtd < 12) 
+        {
+            // 1.30
+            var total = qtd * 1.30
+        }
+        else 
+        {
+            // 1.00
+            var total = qtd * 1
+        }
+
+        document.write(`
+            Quantidade comprada: ${qtd} maçã(s) <br>
+            Total da compra é: ${formataMoeda(total)}
+        `)
+    }   
+
+</script>

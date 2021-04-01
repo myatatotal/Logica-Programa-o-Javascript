@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<h1>Estoque</h1>
+
+<p>
+    Quantidade Atual: <br>
+    <input type="number" id="campoQtdAtual">
+</p>
+
+<p>
+    Quantidade Máx: <br>
+    <input type="number" id="campoQtdMax">
+</p>
+
+<p>
+    Quantidade Min: <br>
+    <input type="number" id="campoQtdMin">
+</p>
+
+<button onclick="verificarEstoque()">
+    Verificar Estoque
+</button>
+
+<script>
+
+    function verificarEstoque()
+    {
+        var atual = campoQtdAtual.valueAsNumber
+        var max = campoQtdMax.valueAsNumber 
+        var min = campoQtdMin.valueAsNumber 
+        var media = (max + min) / 2
+
+        document.write(`
+            Quantidade Atual: ${atual} <br>
+            Quantidade Média: ${media.toFixed(1)} <br>
+        `)
+
+        if (atual >= media)
+        {
+            document.write('NÃO EFETUAR COMPRA!')
+        }
+        else 
+        {
+            document.write('EFETUAR COMPRA!')
+        }
+    }
+
+</script>

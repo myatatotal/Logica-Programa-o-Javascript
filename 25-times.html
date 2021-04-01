@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<h1>Time vencedor</h1>
+
+<p>
+    Nome do Time 1: <br>
+    <input type="text" id="campoNomeTime1">
+</p>
+<p>
+    Gols do Time 1: <br>
+    <input type="number" id="campoGolsTime1">
+</p>
+
+<p>
+    Nome do Time 2: <br>
+    <input type="text" id="campoNomeTime2">
+</p>
+<p>
+    Gols do Time 2: <br>
+    <input type="number" id="campoGolsTime2">
+</p>
+
+<button onclick="verificarPartida()">
+    Verificar Partida
+</button>
+
+
+<script>
+
+    function verificarPartida()
+    {
+        var time1 = campoNomeTime1.value
+        var golsTime1 = campoGolsTime1.valueAsNumber
+        var time2 = campoNomeTime2.value 
+        var golsTime2 = campoGolsTime2.valueAsNumber 
+
+        if (golsTime1 > golsTime2)
+        {
+            document.write('O time vencedor é: ' + time1)
+        }
+        else if (golsTime1 < golsTime2) 
+        {
+            document.write('O time vencedor é:' + time2)
+        }
+        else 
+        {
+            document.write('EMPATE!')
+        }
+    }
+
+</script>

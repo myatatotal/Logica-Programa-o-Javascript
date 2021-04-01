@@ -1,0 +1,26 @@
+Crie um algoritmo que colha as seguintes informações
+do usuário: nome, sobrenome, email e ano de nascimento e exiba as informações abaixo:
+
+
+    Olá, [NOME COMPLETO DO CARA]
+
+    Seu e-mail é: [EMAIL DO CARA]
+    Sua idade é: [IDADE DO CARA] anos
+
+--------------------------------------------
+
+Do que eu preciso:
+    a) Nome 
+    b) Sobrenome 
+    c) E-mail
+    d) Ano de Nascimento 
+
+
+Passo a passo:
+    1) Pedir o nome pro usuário e guardar essa informação
+    2) Pedir o sobrenome pro usuário e guardar essa informação
+    3) Pedir o E-mail pro usuário e guardar essa informação
+    4) Pedir o Ano de Nascimento pro usuário e guardar essa informação (parseInt)
+    5) Criar uma variável pro ano atual
+    6) Calcular a idade do usuário e guardar esse dado
+    7) Exibir as informações no formato definido

@@ -1,0 +1,12 @@
+Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+
+    Álcool:
+        a) Até 20 litros, desconto de 3% por litro 
+        b) Acima de 20 litros, desconto de 5% por litro 
+
+    Gasolina:
+        a) até 20 litros, desconto de 4% por litro 
+        b) acima de 20 litros, desconto de 6% por litro 
+
+Crie um programa que leia o número de litros vendidos e o tipo de combustível. Calcule e exiba o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 3,30 e do álcool é de R$ 2,90.
+

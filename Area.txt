@@ -1,0 +1,15 @@
+Crie um algoritmo para calcular a área de retângulos e quadrados. Exiba o resultado do cálculo na tela da seguinte forma:
+
+    A área calculada é: X.X m²
+
+
+Do que eu preciso:
+    a) Base (float)
+    b) Altura (float)
+
+
+Passo a passo:
+    1) Pedir o valor da base pro usuário 
+    2) Pedir o valor da altura pro usuário 
+    3) Calcular a área: base x altura 
+    4) Exibir o resultado na tela no formato pedido

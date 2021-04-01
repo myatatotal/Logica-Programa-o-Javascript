@@ -1,0 +1,10 @@
+Crie um formulário com os campos: Nome do Produto, Valor Unitário e Quandidade.
+
+Crie também um botão chamado "Calcular" no final desse formulário.
+
+Quando o botão for clicado, colete as informações do formulário e exiba na tela as seguintes informações:
+
+    Produto: [NOME DO PRODUTO]
+    Quantidade: [QTD DO PRODUTO]
+    Preço Unitário: R$ XXX.XX [VALOR DO PRODUTO]
+    Total da Compra: R$ XXX.XX [TOTAL CALCULADO DA COMPRA]

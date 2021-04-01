@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<h1>Aprovação Aluno</h1>
+
+<p>
+    1ª nota: <br>
+    <input type="number" id="campoNota1">
+</p>
+
+<p>
+    2ª nota: <br>
+    <input type="number" id="campoNota2">
+</p>
+
+<button onclick="verificarAprovacao()">
+    Verificar Aprovação
+</button>
+
+<script>
+
+    function verificarAprovacao()
+    {
+        var nota1 = campoNota1.valueAsNumber
+        var nota2 = campoNota2.valueAsNumber 
+        var media = (nota1 + nota2) / 2
+
+        if (media >= 6) {
+            document.write('Você foi APROVADO!<br>')
+        }
+        else {
+            document.write('Você foi REPROVADO!<br>')
+        }
+
+        document.write(`Sua nota final é: ${media.toFixed(1)}`)
+    }
+
+</script>

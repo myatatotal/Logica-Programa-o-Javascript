@@ -1,0 +1,87 @@
+<meta charset="utf-8">
+<h1>Academia Caelum | Formulário de Cadastro</h1>
+
+<p>
+    Preencha o formulário abaixo para realizar seu cadastro.
+</p>
+
+<p>
+    Nome: <br>
+    <input type="text" id="campoNome">
+</p>
+
+<p>
+    Altura: <br>
+    <input type="number" id="campoAltura">
+</p>
+
+<p>
+    Peso: <br>
+    <input type="number" id="campoPeso">
+</p>
+
+<p>
+    Data de Nascimento: <br>
+    <input type="text" id="campoDataNasc">
+</p>
+
+<p>
+    <input type="checkbox" id="campoSouCardiaco"> Tenho problemas cardiacos
+</p>
+
+<button onclick="cadastrar()">
+    Cadastrar
+</button>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+<script src="js/libIdade.js"></script>
+
+<script>
+
+    flatpickr(campoDataNasc, {
+        locale: 'pt',
+        dateFormat: 'd/m/Y'
+    })
+
+    function cadastrar()
+    {
+        var nome = campoNome.value
+        var altura = campoAltura.valueAsNumber
+        var peso = campoPeso.valueAsNumber
+        var dataNascimento = campoDataNasc.value 
+        var souCardiaco = campoSouCardiaco.checked
+
+        var imc = peso / altura ** 2
+        var dataPedacos = dataNascimento.split("/")
+        var idade = calculaIdade( dataPedacos[0], dataPedacos[1], dataPedacos[2] )
+        var frase = ''
+
+        if (souCardiaco == true || idade < 14)
+        {
+            frase = 'PRECISA DE ACOMPANHAMENTO MÉDICO'
+        }
+        else 
+        {
+            frase = 'NÃO PRECISA DE ACOMPANHAMENTO MÉDICO'
+        }
+
+        document.write(`
+            <h2>Parabéns! Seu cadastro foi realizado com sucesso.</h2>
+            <b>Nome:</b> ${nome} <br>
+            <b>Altura:</b> ${altura} m <br>
+            <b>Peso:</b> ${peso} kg <br>
+            <b>IMC:</b> ${imc.toFixed(1)} <br>
+            <b>Data de Nascimento: </b> ${dataNascimento} <br>
+            <b>Idade: </b> ${idade} anos <br>
+            ${frase}
+
+            <br><br>
+            <button onclick="print()">
+                Imprimir
+            </button>
+        `)
+    }
+
+</script>
